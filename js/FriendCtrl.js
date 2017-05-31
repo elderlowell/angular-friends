@@ -169,6 +169,14 @@ angular.module('myApp').controller('FriendCtrl', function($scope) {
     friend_count: 855
   }];
 
-  $scope.sortProp = 'name';
+  $scope.options = [
+    {id: 'name', value: 'Name'},
+    {id: 'friendCount', value: '# of Friends'},
+    {id: 'city', value: 'City'},
+    {id: 'state', value: 'State'},
+    {id: 'country', value: 'Country'}
+  ];
+
+  $scope.sortProp = $scope.options[0];
   $scope.sortDirection = '+';
 });
