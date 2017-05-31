@@ -33,14 +33,14 @@
       <li class='friend' ng-repeat="friend in friends | filter: search | orderBy: sortProp | orderBy: sortDirection">
         <img class="profile-pic" ng-src={{friend.pic_square}}>
         <h3>{{friend.name}}</h3>
-        <div class="location">
+        <div class="location" ng-if="friend.location">
           Location: {{friend.location.city}}, {{friend.location.state}}, {{friend.location.country}}
         </div>
         <div class="status">
           {{friend.status}}
         </div>
         <div class="num-friends">
-          Friends: {{friend.count}}
+          Friends: {{friend.friend_count}}
         </div>
       </li>
     </ul>
